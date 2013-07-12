@@ -1,8 +1,6 @@
 # flight-user-media
 
-[![Build Status](https://secure.travis-ci.org/<username>/flight-user-media.png)](http://travis-ci.org/<username>/flight-user-media)
-
-A [Flight](https://github.com/flightjs/flight) component for…
+A [Flight](https://github.com/flightjs/flight) component for HTML5[getUserMedia](https://developer.mozilla.org/en-US/docs/WebRTC/navigator.getUserMedia)
 
 ## Installation
 
@@ -33,6 +31,10 @@ define(function (require) {
 
   return defineComponent(myComponent);
 
+  this.fallback = function (ev) {
+    useFlashWebcam();
+  };
+
   this.triggerPause = function (ev) {
     this.trigger('ui-user-media-needs-pause');
   };
@@ -49,6 +51,7 @@ define(function (require) {
     this.after('initialize', function () {
       this.on('click', this.triggerPlay);
       this.on(this.attr.snapshotTriggerSelector, 'click', this.triggerSnapshot);
+      this.on('user-media-not-supported', this.fallback);
 
       this.on(document, 'user-media-pause', this.switchToPauseState);
       this.on(document, 'user-media-snapshot-taken', this.displaySnapshot);
