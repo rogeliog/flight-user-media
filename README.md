@@ -1,6 +1,6 @@
 # flight-user-media
 
-A [Flight](https://github.com/flightjs/flight) component for HTML5[getUserMedia](https://developer.mozilla.org/en-US/docs/WebRTC/navigator.getUserMedia)
+A [Flight](https://github.com/flightjs/flight) component for HTML5 [getUserMedia](https://developer.mozilla.org/en-US/docs/WebRTC/navigator.getUserMedia) API.
 
 ## Installation
 
