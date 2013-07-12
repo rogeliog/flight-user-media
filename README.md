@@ -1,5 +1,5 @@
 # flight-user-media
-[![Build Status](https://secure.travis-ci.org/<username>/flight-user-media.png)](http://travis-ci.org/rogeliog/flight-user-media)
+[![Build Status](https://secure.travis-ci.org/rogeliog/flight-user-media.png)](http://travis-ci.org/rogeliog/flight-user-media)
 A [Flight](https://github.com/flightjs/flight) component for HTML5 [getUserMedia](https://developer.mozilla.org/en-US/docs/WebRTC/navigator.getUserMedia) API.
 
 ## Installation
